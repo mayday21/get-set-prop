@@ -19,7 +19,9 @@ class UserMail:
     
     
     def set_email(self, new_email):
-        if val.count('@') > 1 or not isinstance(val, str):
-            return print("Ошибочная почта")
-        
+        if isinstance(new_email, str) and (new_email.count('@')==1 and '.' in new_email ):
+            self.__email = new_email
+        else:
+            print('Ошибочная почта')
+            
 email = property(get_email, set_email)
