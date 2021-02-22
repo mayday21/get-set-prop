@@ -24,4 +24,5 @@ class UserMail:
         else:
             print('Ошибочная почта')
             
-email = property(get_email, set_email)
+    email = property(get_email, set_email)
+
